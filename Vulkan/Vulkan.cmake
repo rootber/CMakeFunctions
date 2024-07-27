@@ -1,0 +1,7 @@
+function(cmake_vulkan project_name)
+    find_package(Vulkan REQUIRED)
+    if(Vulkan_FOUND)
+        include_directories(${Vulkan_INCLUDE_DIRS})
+        target_link_libraries(${project_name} ${Vulkan_LIBRARIES})
+    endif()
+endfunction()
