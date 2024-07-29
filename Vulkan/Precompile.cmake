@@ -1,0 +1,8 @@
+function(precompile ProjectName HeaderFileName type)
+    if(type == PRIVATE)
+        set(CompileType PRIVATE)
+    elseif(type == PUBLIC)
+        set(CompileType PUBLIC)
+    endif ()
+    target_precompile_headers(${ProjectName} ${CompileType} ${HeaderFileName} )
+endfunction()
