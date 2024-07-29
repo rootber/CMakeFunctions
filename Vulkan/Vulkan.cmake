@@ -1,4 +1,4 @@
-function(cmake_vulkan project_name)
+function(cmake_vulkan ProjectName)
     find_package(Vulkan REQUIRED)
     if(Vulkan_FOUND)
         include_directories(${Vulkan_INCLUDE_DIRS})
